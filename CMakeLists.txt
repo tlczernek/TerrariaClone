@@ -24,6 +24,8 @@ project(mygame)
 
 #----------------------SEARCH FOR LIBRARIES IN FOLDER----------------------
 add_subdirectory(thirdparty/raylib-5.0)
+add_subdirectory(thirdparty/imgui-docking)
+add_subdirectory(thirdparty/rlimgui)
 
 
 
@@ -81,6 +83,6 @@ endif()
 target_include_directories("${CMAKE_PROJECT_NAME}" PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src/")
 
 #----------------------LINK LIBRARY STATICALLY----------------------
-target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE raylib_static)
+target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE raylib_static imgui rlimgui)
 
 
